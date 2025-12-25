@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muhammad Safry - DevOps, AI/ML, MLOps & Cybersecurity Professional">
+    <title>Muhammad Safry | DevOps & AI/ML Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="data.js" defer></script>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">MS</span>
+                <span class="brand-text">Muhammad Safry</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I'm</p>
+                    <h1 class="hero-name">
+                        <span class="name-highlight">Muhammad Safry</span>
+                    </h1>
+                    <div class="hero-title">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        A passionate DevOps, AI/ML, MLOps & Cybersecurity professional 
+                        dedicated to building scalable solutions and innovative systems.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/msafryx" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammed-safry/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/msafryx" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:mzafry2002@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <div class="floating-card card-1">
+                            <i class="fab fa-docker"></i>
+                            <span>DevOps</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-brain"></i>
+                            <span>AI/ML</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Cyber Security</span>
+                        </div>
+                        <div class="floating-card card-4">
+                            <i class="fas fa-code"></i>
+                            <span>Fullstack Developer</span>
+                        </div>
+                        <div class="profile-placeholder">
+                            <img src="prof.png" alt="Muhammad Safry" class="profile-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a versatile technology professional with expertise spanning DevOps, 
+                        Artificial Intelligence, Machine Learning Operations, and Cybersecurity. 
+                        My passion lies in creating robust, scalable, and secure systems that 
+                        drive innovation and efficiency.
+                    </p>
+                    <p>
+                        With extensive experience in developing cutting-edge solutions, I've 
+                        worked on numerous projects that combine the power of cloud infrastructure, 
+                        machine learning, and security best practices. I'm always eager to 
+                        tackle complex challenges and deliver solutions that make a real impact.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="5">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">Technologies Mastered</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-card">
+                        <div class="card-glow"></div>
+                        <div class="tech-badges">
+                            <span class="badge">DevOps</span>
+                            <span class="badge">AI/ML</span>
+                            <span class="badge">MLOps</span>
+                            <span class="badge">Cybersecurity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools & Technologies Section -->
+            <div class="tools-section">
+                <h3 class="tools-title">Tools & Technologies</h3>
+                <div class="tools-grid">
+                    <div class="tool-item" data-tooltip="Docker">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="Kubernetes">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="AWS">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="Python">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fab fa-python"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="JavaScript">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fab fa-js"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="React">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fab fa-react"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="Node.js">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="Git">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="Terraform">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="Ansible">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt="Ansible" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="Jenkins">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fab fa-jenkins"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="Linux">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="TensorFlow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="MongoDB">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="PostgreSQL">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                    <div class="tool-item" data-tooltip="Redis">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="tool-fallback" style="display: none;">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>DevOps & Cloud</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Docker & Kubernetes</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS / Azure / GCP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CI/CD Pipelines</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Terraform & Ansible</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI/ML & MLOps</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Python & TensorFlow</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="93"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PyTorch & Scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MLflow & Kubeflow</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="87"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Model Deployment</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="91"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cybersecurity</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Security Architecture</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="89"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Penetration Testing</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Security Automation</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Compliance & Auditing</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="86"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Development</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Python / Go / Bash</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="94"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Linux Administration</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Monitoring & Logging</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Microservices Architecture</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="87"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-btn-prev" id="projectsPrev" aria-label="Previous projects">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-wrapper">
+                    <div class="projects-carousel" id="projectsCarousel">
+                        <!-- Projects will be dynamically loaded from data.js -->
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-next" id="projectsNext" aria-label="Next projects">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="carousel-indicators" id="projectsIndicators"></div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Certifications & Credentials</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Click on any certification to view details and verify credentials</p>
+            </div>
+            <!-- Certifications Subsection -->
+            <div class="subsection-header">
+                <h3 class="subsection-title">
+                    <i class="fas fa-certificate"></i>
+                    Certifications
+                </h3>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-btn-prev" id="certsPrev" aria-label="Previous certifications">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-wrapper">
+                    <div class="certifications-carousel" id="certificationsCarousel">
+                        <!-- Certifications will be dynamically loaded from data.js -->
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-next" id="certsNext" aria-label="Next certifications">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="carousel-indicators" id="certsIndicators"></div>
+
+            <!-- Credentials Subsection -->
+            <div class="subsection-header" style="margin-top: 4rem;">
+                <h3 class="subsection-title">
+                    <i class="fas fa-badge-check"></i>
+                    Credentials & Badges
+                </h3>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-btn-prev" id="credsPrev" aria-label="Previous credentials">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-wrapper">
+                    <div class="credentials-carousel" id="credentialsCarousel">
+                        <!-- Credentials will be dynamically loaded from data.js -->
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-next" id="credsNext" aria-label="Next credentials">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="carousel-indicators" id="credsIndicators"></div>
+        </div>
+    </section>
+
+    <!-- Certification Modal -->
+    <div class="modal-overlay" id="certModal">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content" id="modalContent">
+                <!-- Modal content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Experience & Achievements</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020 - Present</div>
+                        <h3>Senior DevOps & ML Engineer</h3>
+                        <p class="timeline-company">Technology Company</p>
+                        <ul class="timeline-details">
+                            <li>Architected and deployed scalable cloud infrastructure serving millions of users</li>
+                            <li>Developed and maintained MLOps pipelines for production ML models</li>
+                            <li>Implemented security best practices and compliance frameworks</li>
+                            <li>Led team of engineers in adopting DevOps and cloud-native practices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018 - 2020</div>
+                        <h3>DevOps Engineer</h3>
+                        <p class="timeline-company">Tech Startup</p>
+                        <ul class="timeline-details">
+                            <li>Built CI/CD pipelines reducing deployment time by 80%</li>
+                            <li>Containerized applications using Docker and orchestrated with Kubernetes</li>
+                            <li>Implemented monitoring and alerting systems for infrastructure</li>
+                            <li>Automated infrastructure provisioning with Infrastructure as Code</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2016 - 2018</div>
+                        <h3>Software Engineer</h3>
+                        <p class="timeline-company">Software Company</p>
+                        <ul class="timeline-details">
+                            <li>Developed and maintained backend services and APIs</li>
+                            <li>Worked on machine learning projects and model development</li>
+                            <li>Contributed to open-source projects</li>
+                            <li>Participated in security audits and vulnerability assessments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <h3 class="achievements-title">Key Achievements</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <i class="fas fa-trophy"></i>
+                        <h4>50+ Projects</h4>
+                        <p>Successfully delivered projects across DevOps, AI/ML, and Security</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Certifications</h4>
+                        <p>AWS, Kubernetes, Security, and ML certifications</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-users"></i>
+                        <h4>Team Leadership</h4>
+                        <p>Led cross-functional teams in delivering complex solutions</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-star"></i>
+                        <h4>Open Source</h4>
+                        <p>Active contributor to multiple open-source projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        I'm always open to discussing new projects, creative ideas, 
+                        or opportunities to be part of your visions. Feel free to reach out!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:contact@msafryx.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Email</h4>
+                                <p>contact@msafryx.com</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/msafryx" target="_blank" rel="noopener noreferrer" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>GitHub</h4>
+                                <p>github.com/msafryx</p>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/msafryx" target="_blank" rel="noopener noreferrer" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/msafryx</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Muhammad Safry. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/msafryx" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/msafryx" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/msafryx" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
