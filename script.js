@@ -364,29 +364,42 @@ function initCarouselSwipe(type) {
     let startX = 0;
     let currentX = 0;
     let isDragging = false;
+    let hasMoved = false;
     
+    // Touch events for mobile
     carousel.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX;
         isDragging = true;
-    });
+        hasMoved = false;
+    }, { passive: true });
     
     carousel.addEventListener('touchmove', (e) => {
         if (!isDragging) return;
         currentX = e.touches[0].clientX;
-    });
+        const diff = Math.abs(startX - currentX);
+        if (diff > 10) {
+            hasMoved = true;
+        }
+    }, { passive: true });
     
-    carousel.addEventListener('touchend', () => {
+    carousel.addEventListener('touchend', (e) => {
         if (!isDragging) return;
         isDragging = false;
         
-        const diff = startX - currentX;
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) {
-                moveCarousel(type, 'next');
-            } else {
-                moveCarousel(type, 'prev');
+        // Only navigate if user actually swiped, not just tapped
+        if (hasMoved) {
+            const diff = startX - currentX;
+            if (Math.abs(diff) > 50) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (diff > 0) {
+                    moveCarousel(type, 'next');
+                } else {
+                    moveCarousel(type, 'prev');
+                }
             }
         }
+        hasMoved = false;
     });
 }
 
@@ -394,8 +407,12 @@ function updateCarouselButtons(type, totalItems) {
     const state = carouselState[type];
     const maxIndex = Math.max(0, totalItems - state.itemsPerView);
     
-    const prevBtn = document.getElementById(`${type}Prev`);
-    const nextBtn = document.getElementById(`${type}Next`);
+    // Handle special case for credentials
+    const prevBtnId = type === 'credentials' ? 'credsPrev' : `${type}Prev`;
+    const nextBtnId = type === 'credentials' ? 'credsNext' : `${type}Next`;
+    
+    const prevBtn = document.getElementById(prevBtnId);
+    const nextBtn = document.getElementById(nextBtnId);
     
     if (prevBtn) {
         prevBtn.disabled = state.currentIndex === 0;
@@ -537,16 +554,36 @@ function renderCredentials() {
     updateCarouselButtons('credentials', credentialsData.length);
     updateCarouselIndicators('credentials', credentialsData.length);
     
-    // Setup navigation buttons
+    // Setup navigation buttons - remove existing listeners first
     const prevBtn = document.getElementById('credsPrev');
     const nextBtn = document.getElementById('credsNext');
-    if (prevBtn) prevBtn.addEventListener('click', () => moveCarousel('credentials', 'prev'));
-    if (nextBtn) nextBtn.addEventListener('click', () => moveCarousel('credentials', 'next'));
+    
+    // Remove existing event listeners by cloning and replacing
+    if (prevBtn) {
+        const newPrevBtn = prevBtn.cloneNode(true);
+        prevBtn.parentNode.replaceChild(newPrevBtn, prevBtn);
+        newPrevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            moveCarousel('credentials', 'prev');
+        });
+    }
+    
+    if (nextBtn) {
+        const newNextBtn = nextBtn.cloneNode(true);
+        nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
+        newNextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            moveCarousel('credentials', 'next');
+        });
+    }
     
     // Initialize swipe support
     setTimeout(() => {
         initCarouselSwipe('credentials');
         updateCarouselPosition('credentials');
+        updateCarouselButtons('credentials', credentialsData.length);
     }, 100);
 }
 
@@ -607,10 +644,17 @@ function createCertificationCard(item, index, isCredential = false) {
     
     // Make entire card clickable
     certCard.addEventListener('click', (e) => {
-        if (!e.target.closest('.cert-btn')) {
-            openCertModal(item.id, isCredential);
+        // Don't open modal if clicking on buttons or links
+        if (e.target.closest('.cert-btn') || e.target.closest('a')) {
+            return;
         }
+        // Prevent event from bubbling to carousel swipe handler
+        e.stopPropagation();
+        openCertModal(item.id, isCredential);
     });
+    
+    // Ensure card content is clickable
+    certCard.style.pointerEvents = 'auto';
     
     return certCard;
 }
@@ -776,6 +820,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+// ===== Keyboard Navigation for Carousels =====
+document.addEventListener('keydown', (e) => {
+    // Only handle arrow keys when not typing in an input
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    
+    const activeSection = document.querySelector('section:target, section[id]:target');
+    if (!activeSection) return;
+    
+    // Check if we're in certifications or credentials section
+    if (activeSection.id === 'certifications' || activeSection.id === 'credentials') {
+        const type = activeSection.id === 'certifications' ? 'certifications' : 'credentials';
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            moveCarousel(type, 'prev');
+        } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            moveCarousel(type, 'next');
+        }
+    }
 });
 
 // ===== Initialize on Load =====
