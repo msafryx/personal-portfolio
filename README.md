@@ -2,7 +2,7 @@
 
 A modern, responsive, and feature-rich personal portfolio website showcasing professional expertise in DevOps, AI/ML, MLOps, and Cybersecurity. Built with vanilla HTML, CSS, and JavaScript for optimal performance and easy customization.
 
-![Portfolio Preview](https://img.shields.io/badge/Status-Live-success) ![License](https://img.shields.io/badge/License-MIT-blue)
+![Portfolio Preview](https://img.shields.io/badge/Status-Live-success) 
 
 ## ✨ Features
 
